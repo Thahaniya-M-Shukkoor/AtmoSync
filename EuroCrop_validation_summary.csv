@@ -1,0 +1,2 @@
+input_rows,output_rows,input_columns,output_columns,rows_with_any_imputation,total_numeric_cells_imputed,duplicate_rows_after_cleaning,null_cells_after_cleaning,timestamp_min,timestamp_max
+53305,53305,29,31,53305,1153196,0,0,2018-06-01 00:00:00,2024-06-30 00:00:00
