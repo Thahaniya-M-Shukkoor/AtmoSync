@@ -1,5 +1,4 @@
 # AtmoSync: Micro-Climate Arbitrage Analytics
-Of course, Chocobee 😊. Here’s a **professional, internship-report-ready version** for your **AtmoSync: Micro-Climate Arbitrage Analytics** project, adapted to the dataset you’re actually using.
 
 ## 1. Project Overview
 ### 1.1 Background
