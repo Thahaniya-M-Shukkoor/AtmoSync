@@ -27,5 +27,6 @@ The primary objectives of the AtmoSync project are:
 3. Identify key transportation and storage factors associated with product deterioration and shipment risk.
 4. Compare commodity-wise quality and spoilage patterns to identify products that are more vulnerable during transportation.
 5. Integrate commodity market-price information to assess the potential economic impact of quality deterioration and spoilage.
-6. Develop an interactive Power BI decision-support dashboard to monitor shipment conditions, identify high-risk shipments, and support timely logistics decisions.
+6. Analyze operational efficiency and costs to examine relationships among fuel consumption,fuel costs, energy consumption, operational costs,and efficiency ratio.
+7. Develop an interactive Power BI decision-support dashboard to monitor shipment conditions, identify high-risk shipments, and support timely logistics decisions.
 
