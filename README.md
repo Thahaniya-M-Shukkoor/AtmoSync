@@ -48,6 +48,7 @@ The dataset contains **53,305 records and 29 columns**.
 
 ### 2.4 Important Variables
 The variables relevant to the AtmoSync project include:
+
 **Environmental & IoT Variables**
 * **Temperature** – Environmental temperature during transportation.
 * **Humidity** – Environmental humidity during transportation.
@@ -57,11 +58,13 @@ The variables relevant to the AtmoSync project include:
 * **IoT_Sensor_Reading_Light** – Light intensity recorded through IoT sensors.
 * **Storage_Temperature** – Temperature during storage.
 * **Storage_Humidity** – Humidity during storage.
+
 **Agricultural & Product Variables**
 * **Crop_Type** – Type of agricultural crop/product.
 * **Crop_Yield** – Quantity/yield associated with the crop.
 * **Spoilage_Risk** – Indicator of the potential risk of product spoilage.
 * **Quality_Maintenance_Ratio** – Measure related to maintaining product quality.
+
 **Transportation & Logistics Variables**
 * **Vehicle_Type** – Type of vehicle used for transportation.
 * **Route_Distance** – Distance travelled along the route.
@@ -71,6 +74,7 @@ The variables relevant to the AtmoSync project include:
 * **Queue_Time** – Time spent waiting in queues.
 * **Warehouse_Storage_Time** – Duration of warehouse storage.
 * **Vehicle_Load_Capacity** – Vehicle carrying capacity.
+
 **Operational & Cost Variables**
 * **Fuel_Consumption** – Fuel consumed during transportation.
 * **Fuel_Costs** – Fuel-related costs.
