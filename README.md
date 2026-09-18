@@ -30,3 +30,65 @@ The primary objectives of the AtmoSync project are:
 6. Analyze operational efficiency and costs to examine relationships among fuel consumption,fuel costs, energy consumption, operational costs,and efficiency ratio.
 7. Develop an interactive Power BI decision-support dashboard to monitor shipment conditions, identify high-risk shipments, and support timely logistics decisions.
 
+## 2. Dataset Description
+
+### 2.1 Dataset Name
+**Euro Crop Agricultural Logistics Dataset**
+
+### 2.2 Source
+The dataset was obtained from **Kaggle** and is designed for analyzing agricultural logistics, transportation conditions, storage operations, IoT-based environmental monitoring, efficiency, and product quality.
+
+### 2.3 Dataset Dimensions
+The dataset contains **53,305 records and 29 columns**.
+* **Rows:** 53,305
+* **Columns:** 29
+* **Numerical variables:** 25
+* **Categorical/date variables:** 4
+* **Missing values:** No missing values were identified in the dataset after preprocessing.
+
+### 2.4 Important Variables
+The variables relevant to the AtmoSync project include:
+**Environmental & IoT Variables**
+* **Temperature** – Environmental temperature during transportation.
+* **Humidity** – Environmental humidity during transportation.
+* **Vibration_Level** – Vibration experienced during transportation.
+* **IoT_Sensor_Reading_Temperature** – Temperature recorded through IoT sensors.
+* **IoT_Sensor_Reading_Humidity** – Humidity recorded through IoT sensors.
+* **IoT_Sensor_Reading_Light** – Light intensity recorded through IoT sensors.
+* **Storage_Temperature** – Temperature during storage.
+* **Storage_Humidity** – Humidity during storage.
+**Agricultural & Product Variables**
+* **Crop_Type** – Type of agricultural crop/product.
+* **Crop_Yield** – Quantity/yield associated with the crop.
+* **Spoilage_Risk** – Indicator of the potential risk of product spoilage.
+* **Quality_Maintenance_Ratio** – Measure related to maintaining product quality.
+**Transportation & Logistics Variables**
+* **Vehicle_Type** – Type of vehicle used for transportation.
+* **Route_Distance** – Distance travelled along the route.
+* **Delivery_Time** – Time required for delivery.
+* **Traffic_Level** – Traffic conditions affecting transportation.
+* **Weather_Impact** – Effect of weather conditions on logistics.
+* **Queue_Time** – Time spent waiting in queues.
+* **Warehouse_Storage_Time** – Duration of warehouse storage.
+* **Vehicle_Load_Capacity** – Vehicle carrying capacity.
+**Operational & Cost Variables**
+* **Fuel_Consumption** – Fuel consumed during transportation.
+* **Fuel_Costs** – Fuel-related costs.
+* **Operational_Cost** – Overall operational logistics cost.
+* **Energy_Consumption** – Energy consumed during operations.
+* **Efficiency_Ratio** – Indicator of logistics efficiency.
+
+### 2.5 Why This Dataset Was Selected
+The dataset was selected because it closely aligns with the objectives of the **AtmoSync: Micro-Climate & Agricultural Logistics Analytics** project.
+It contains environmental and IoT variables such as **temperature, humidity, and vibration**, along with transportation, storage, operational, and spoilage-related variables. These features allow the project to investigate how environmental and logistics conditions are associated with **product quality and spoilage risk**.
+The dataset also provides sufficient information to analyze relationships between **environmental conditions, transportation distance, storage duration, delivery time, operational costs, and product-quality indicators**.
+Therefore, it provides a suitable foundation for developing an analytics solution that can identify high-risk transportation and storage conditions and support data-driven logistics decisions.
+
+### 2.6 Dataset Limitations
+Despite its suitability for the project, the dataset has some limitations:
+1. **No market-price information:** The dataset does not contain commodity market prices or alternative-market prices. Therefore, the financial component of the original AtmoSync "Spoilage Arbitrage" concept cannot be calculated directly from this dataset alone.
+2. **No shipment/container identifiers:** The dataset does not contain explicit **Container_ID** or **Shipment_ID** fields, which limits shipment-level tracking.
+3. **No explicit location information:** There is no dedicated location/market column for analyzing geographic-level differences.
+4. **No direct rerouting information:** The dataset does not provide alternative routes or destination-market information, so actual rerouting decisions cannot be directly evaluated.
+5. **Limited time-series information:** Although **Harvest_Date** is available, the dataset does not provide a continuous timestamp for individual sensor observations. Therefore, real-time sensor-stream analysis cannot be fully performed.
+6. **Market integration requires additional data:** To study the economic impact of spoilage or potential arbitrage opportunities, a separate commodity market-price dataset would need to be integrated.
