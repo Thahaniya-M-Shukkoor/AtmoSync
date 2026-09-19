@@ -44,7 +44,7 @@ The dataset contains **53,305 records and 29 columns**.
 * **Columns:** 29
 * **Numerical variables:** 25
 * **Categorical/date variables:** 4
-* **Missing values:** No missing values were identified in the dataset after preprocessing.
+* **Missing values:** No missing values were identified in the dataset.
 
 ### 2.4 Important Variables
 The variables relevant to the AtmoSync project include:
