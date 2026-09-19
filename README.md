@@ -22,13 +22,13 @@ AtmoSync approaches this challenge from a business analytics perspective by conv
 
 ### 1.4 Project Objectives
 The primary objectives of the AtmoSync project are:
-1. Analyze environmental conditions such as temperature, humidity, and vibration across cold-chain shipments.
-2. Evaluate the relationship between environmental conditions and product quality/spoilage risk.
-3. Identify key transportation and storage factors associated with product deterioration and shipment risk.
-4. Compare commodity-wise quality and spoilage patterns to identify products that are more vulnerable during transportation.
-5. Integrate commodity market-price information to assess the potential economic impact of quality deterioration and spoilage.
-6. Analyze operational efficiency and costs to examine relationships among fuel consumption,fuel costs, energy consumption, operational costs,and efficiency ratio.
-7. Develop an interactive Power BI decision-support dashboard to monitor shipment conditions, identify high-risk shipments, and support timely logistics decisions.
+1. **Environmental Condition Analysis:** Analyze temperature, humidity, and  vibration levels across cold-chain shipments.
+2. **Quality & Spoilage Risk Assessment:** Evaluate the relationship between environmental conditions and product quality/spoilage risk.
+3. **Transportation & Storage Risk Analysis:** Identify key transportation and storage factors associated with product deterioration and shipment risk.
+4. **Commodity-wise Analysis:** Compare quality and spoilage patterns across commodities to identify products that are more vulnerable during transportation.
+5. **Economic Impact Assessment:** Integrate commodity market-price information to estimate the potential economic impact of quality deterioration and spoilage.
+6. **Operational Efficiency & Cost Analysis:** Examine relationships among fuel consumption, fuel costs, energy consumption, operational costs, and efficiency ratio to assess logistics efficiency.
+7. **Decision-Support Dashboard Development:** Develop an interactive Power BI dashboard to monitor shipment conditions, identify high-risk shipments, and support timely logistics decisions.
 
 ## 2. Dataset Description
 
