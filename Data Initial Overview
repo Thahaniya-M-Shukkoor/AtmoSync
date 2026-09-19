@@ -26,6 +26,10 @@
 #* Truck — 37,444 rows
 #* Van — 10,562 rows
 #* Motorbike — 5,299 rows
+#Crops are more balanced between corn and wheat.
+#* Corn — 21,400 rows
+#* Wheat — 21,253 rows
+#* Rice — 10,652 rows
 
 #Data-quality warning
 #The largest issue is not missing values, but infinite numeric values and extreme magnitudes. Several columns are almost entirely infinite.
@@ -41,7 +45,3 @@
 
 #These values make the dataset unsuitable for direct modeling or normal descriptive statistics without cleaning. 
 #Some finite values are also extremely large, suggesting possible overflow, corrupted transformations, or unit-scaling problems.
-#Crops are more balanced between corn and wheat.
-#* Corn — 21,400 rows
-#* Wheat — 21,253 rows
-#* Rice — 10,652 rows
