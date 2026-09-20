@@ -26,8 +26,8 @@ The primary objectives of the AtmoSync project are:
 2. **Quality & Spoilage Risk Assessment:** Evaluate the relationship between environmental conditions and product quality/spoilage risk.
 3. **Transportation & Storage Risk Analysis:** Identify key transportation and storage factors associated with product deterioration and shipment risk.
 4. **Commodity-wise Analysis:** Compare quality and spoilage patterns across commodities to identify products that are more vulnerable during transportation.
-5. **Economic Impact Assessment:** Integrate commodity market-price information to estimate the potential economic impact of quality deterioration and spoilage.
-6. **Operational Efficiency & Cost Analysis:** Examine relationships among fuel consumption, fuel costs, energy consumption, operational costs, and efficiency ratio to assess logistics efficiency.
+5. **Economic Impact Assessment:** To estimate the potential economic impact of quality deterioration and spoilage.
+6. **Operational Efficiency & Cost Analysis:** Examine relationships among fuel consumption, fuel costs, energy consumption to assess logistics efficiency.
 7. **Decision-Support Dashboard Development:** Develop an interactive Power BI dashboard to monitor shipment conditions, identify high-risk shipments, and support timely logistics decisions.
 
 ## 2. Dataset Description
@@ -96,3 +96,87 @@ Despite its suitability for the project, the dataset has some limitations:
 4. **No direct rerouting information:** The dataset does not provide alternative routes or destination-market information, so actual rerouting decisions cannot be directly evaluated.
 5. **Limited time-series information:** Although **Harvest_Date** is available, the dataset does not provide a continuous timestamp for individual sensor observations. Therefore, real-time sensor-stream analysis cannot be fully performed.
 6. **Market integration requires additional data:** To study the economic impact of spoilage or potential arbitrage opportunities, a separate commodity market-price dataset would need to be integrated.
+
+## 3. Technology Stack
+* Python
+* Pandas
+* NumPy
+* Matplotlib/Seaborn
+* Power BI
+
+## 4. Data Preparation
+Data preparation was performed using **Python and Pandas** to improve data quality, standardize the dataset, and create additional variables required for subsequent exploratory and business analysis. The preparation process consisted of the following stages.
+### 4.1 Header and Date-Time Standardization
+The original dataset contained a column named `Unnamed: 0`, which was identified as representing timestamp information. This column was renamed to **`timestamp`** for better interpretability.
+Date-related columns were converted from their original format into the standardized **`datetime64[ns]`** data type. This ensures that the variables can be used reliably for time-based analysis and feature extraction.
+In addition, all column names were reformatted into a consistent **lower_snake_case** convention. This improves readability and makes the dataset easier to work with in Python, SQL, and Power BI.
+
+**Example:**
+
+```text
+Original                    Standardized
+Unnamed: 0       →          timestamp
+Vehicle Type     →          vehicle_type
+Crop Type        →          crop_type
+Harvest Date     →          harvest_date
+```
+
+---
+### 4.2 Corrupted Column Removal
+The dataset contained several features with an extremely high proportion of infinite (`inf`) values. Columns containing more than **90% infinite values** were considered unreliable for meaningful analysis and were removed.
+The following columns were dropped:
+* `crop_yield`
+* `vehicle_load_capacity`
+* `station_capacity`
+* `operational_cost`
+* `energy_consumption`
+* `inventory_levels`
+* `efficiency_ratio`
+Removing these highly corrupted features reduced noise and prevented unreliable variables from affecting subsequent statistical analysis and visualization.
+---
+
+### 4.3 Missing Value and Outlier Handling
+After removing the severely corrupted columns, the remaining infinite (`inf`) values were converted to **NaN (Not a Number)** so that they could be handled consistently as missing observations.
+Missing values in selected numerical variables were then imputed using the **median** of the respective column.
+Median imputation was applied to:
+* `route_distance`
+* `iot_sensor_reading_light`
+The median was selected because it is less sensitive to extreme observations than the mean and is therefore suitable for numerical logistics and sensor-related variables that may contain skewed values.
+---
+
+### 4.4 Log Transformation
+Several numerical variables displayed highly skewed or exponential distributions. To reduce the effect of extreme values and improve the suitability of these variables for analysis, log-transformed versions were created.
+Log transformations were applied to:
+* `route_distance`
+* `storage_humidity`
+* `traffic_level`
+Rather than replacing the original variables, transformed versions were created so that both the **original and transformed representations** could be retained for comparison and future analysis.
+This transformation can help make highly skewed distributions more manageable and improve the interpretation of relationships during exploratory analysis.
+---
+
+### 4.5 Time-Based Feature Engineering
+Additional time-related features were created from the standardized `timestamp` variable to enable more detailed temporal analysis.
+The following features were engineered:
+
+| New Feature          | Purpose                                                                          |
+| -------------------- | -------------------------------------------------------------------------------- |
+| `transit_year`       | Identifies the year of the shipment/observation                                  |
+| `transit_month`      | Enables monthly pattern analysis                                                 |
+| `transit_hour`       | Enables analysis of hourly patterns                                              |
+| `days_since_harvest` | Measures the time elapsed between harvest and the relevant logistics observation |
+
+These features allow the project to examine whether logistics conditions and commodity-related outcomes vary across **years, months, hours, and post-harvest periods**.
+---
+
+### 4.6 Summary of Data Preparation
+The overall preprocessing workflow can be summarized as:
+**Raw Dataset → Column Standardization → Date-Time Conversion → Corrupted Feature Removal → Infinite Value Handling → Missing Value Imputation → Log Transformation → Time-Based Feature Engineering → Analysis-Ready Dataset**
+After preprocessing, the dataset was transformed into a more consistent and analysis-ready format. The cleaned dataset can now be used for the next stages of the AtmoSync project, including **exploratory data analysis, environmental-condition analysis, logistics analysis, quality/spoilage analysis, and dashboard development**.
+
+### 4.7 Data Preparation Outcome
+The preprocessing stage improved the dataset in four major ways:
+* **Improved consistency** through standardized column names and date-time formats.
+* **Improved data quality** through the removal of severely corrupted features.
+* **Reduced missing/infinite-value issues** through appropriate treatment and median imputation.
+* **Enhanced analytical capability** through log-transformed and time-based engineered features.
+This prepared dataset serves as the foundation for the subsequent analytical stages of the project.
