@@ -165,7 +165,7 @@ The following features were engineered:
 | `transit_hour`       | Enables analysis of hourly patterns                                              |
 | `days_since_harvest` | Measures the time elapsed between harvest and the relevant logistics observation |
 
-### These features allow the project to examine whether logistics conditions and commodity-related outcomes vary across **years, months, hours, and post-harvest periods**.
+### These features allow the project to examine whether logistics conditions and commodity-related outcomes vary across years, months, hours, and post-harvest periods.
 ---
 
 ### 4.6 Summary of Data Preparation
