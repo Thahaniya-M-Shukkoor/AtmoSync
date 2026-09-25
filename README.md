@@ -180,3 +180,23 @@ The preprocessing stage improved the dataset in four major ways:
 * **Reduced missing/infinite-value issues** through appropriate treatment and median imputation.
 * **Enhanced analytical capability** through log-transformed and time-based engineered features.
 This prepared dataset serves as the foundation for the subsequent analytical stages of the project.
+
+## 5. Exploratory Data Analysis
+### 5.1 Descriptive Analysis
+### Key Findings:
+### 1. Spoilage risk is comparatively stable
+* Mean spoilage risk is 1.1635 and median is 1.1612.
+* Its low standard deviation (0.0701) indicates relatively limited variation across observations.
+### 2. Vibration has substantial variability
+* Median vibration is 91.47, while the mean is 277.14.
+* The maximum value of 57,952.53 indicates strong right-skewness and potential extreme vibration events/outliers.
+### 3. Queue time appears more interpretable than several other operational fields
+* Mean queue time: 5.17
+* Median queue time: 4.05
+* Maximum queue time: 66.22
+* The mean above the median suggests some longer-delay observations.
+### 4. Days since harvest is broadly dispersed
+* Mean: 1,443 days
+* Median: 1,445 days
+* Standard deviation: 649 days
+* Since the mean and median are very close, this measure is substantially more balanced than the highly skewed sensor/operational fields.
