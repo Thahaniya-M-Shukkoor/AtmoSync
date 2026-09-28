@@ -1,4 +1,4 @@
-# AtmoSync: Micro-Climate Arbitrage Analytics
+# AtmoSync: Micro-Climate Arbitrage Analytics 
 
 ## 1. Project Overview
 ### 1.1 Background
