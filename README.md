@@ -183,20 +183,11 @@ This prepared dataset serves as the foundation for the subsequent analytical sta
 
 ## 5. Exploratory Data Analysis
 ### 5.1 Descriptive Analysis
-### Key Findings:
-### 1. Spoilage risk is comparatively stable
-* Mean spoilage risk is 1.1635 and median is 1.1612.
-* Its low standard deviation (0.0701) indicates relatively limited variation across observations.
-### 2. Vibration has substantial variability
-* Median vibration is 91.47, while the mean is 277.14.
-* The maximum value of 57,952.53 indicates strong right-skewness and potential extreme vibration events/outliers.
-### 3. Queue time appears more interpretable than several other operational fields
-* Mean queue time: 5.17
-* Median queue time: 4.05
-* Maximum queue time: 66.22
-* The mean above the median suggests some longer-delay observations.
-### 4. Days since harvest is broadly dispersed
-* Mean: 1,443 days
-* Median: 1,445 days
-* Standard deviation: 649 days
-* Since the mean and median are very close, this measure is substantially more balanced than the highly skewed sensor/operational fields.
+Key Analytical Insights
+1. **Symmetric vs. Skewed Metrics:**
+* Symmetric Features: temperature, humidity, storage_temperature, route_distance, and spoilage_risk show near-identical mean and median values, indicating well-behaved, symmetric distributions post-transformation.
+* Right-Skewed Features: vibration_level, fuel_costs, and quality_maintenance_ratio exhibit significantly higher means than medians (e.g., vibration_level mean of 249.95 vs. median of 91.47).This indicates positive skew, where a small subset of trips experiences unusually high vibration or cost spikes.
+2. **Environmental Conditions:**
+* Transit ambient temperature averages 44.94 with a standard deviation of 15.01, whereas controlled storage_temperature remains tightly concentrated around 7.51 with a low standard deviation of 2.95.
+3. **Operational Stability:**
+* Average route_distance sits at 534.20 units with low relative variability (Std Dev = 82.45), while spoilage_risk shows minimal variance (Std Dev = 0.07).
