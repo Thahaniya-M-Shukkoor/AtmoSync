@@ -191,3 +191,17 @@ Key Analytical Insights
 * Transit ambient temperature averages 44.94 with a standard deviation of 15.01, whereas controlled storage_temperature remains tightly concentrated around 7.51 with a low standard deviation of 2.95.
 3. **Operational Stability:**
 * Average route_distance sits at 534.20 units with low relative variability (Std Dev = 82.45), while spoilage_risk shows minimal variance (Std Dev = 0.07).
+
+# 5.2 Univariate Analysis
+Key Analysis:
+1. **Typical Operating Conditions**
+* Crop Types: Corn ($40.1\%$) and Wheat ($39.9\%$) make up the vast majority of all shipments, while Rice accounts for the remaining ($20.0\%$).
+* Vehicles Used: Trucks perform 70.2% of all deliveries, making them the primary vehicle type. Vans ($19.8\%$) and Motorbikes ($9.9\%$) handle smaller, localized trips.
+* Storage Environment: Cold storage warehouses maintain steady conditions, typically staying around $7.5^\circ\text{C}$ temperature and $75\%$ humidity.  
+* Transit Times & Distances: Most deliveries travel about $530\text{ km}$, taking roughly $8.5\text{ hours}$ on the road and $18\text{ hours}$ in warehouse storage.
+2. **Extreme Values & Outliers**
+* Smooth & Balanced Variables: Ambient temperature, humidity, storage settings, travel distance, delivery time, and spoilage risk are smooth and evenly balanced. Most trips fall right around the typical average.
+* Variables with Extreme Spikes:
+* * Vibration Level: Most trips experience smooth, low vibration, but a small group of shipments suffer extreme bumps and rough road shocks.   
+* * Fuel Costs: While fuel costs are usually low to moderate, a few long-haul trips spike significantly higher in cost.   
+* * Quality Maintenance Ratio: Most shipments stay in a low, healthy range, but several trips show unusually high quality maintenance scores due to unexpected delays or route stress.   
