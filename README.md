@@ -205,3 +205,13 @@ Key Analysis:
 * * Vibration Level: Most trips experience smooth, low vibration, but a small group of shipments suffer extreme bumps and rough road shocks.   
 * * Fuel Costs: While fuel costs are usually low to moderate, a few long-haul trips spike significantly higher in cost.   
 * * Quality Maintenance Ratio: Most shipments stay in a low, healthy range, but several trips show unusually high quality maintenance scores due to unexpected delays or route stress.   
+
+# 5.3 Bivariate Analysis
+Key Analytical Insights
+1. **Factors appear associated with spoilage:**
+* Temperature & Storage Temperature: Strong positive correlation. Higher ambient and storage temperatures directly elevate the Spoilage_Risk.
+* Warehouse Storage Time: Moderate positive correlation. Extended exposure over time compounds thermal degradation.
+2. **Longer storage correspond to lower quality**
+* The negative slope in the Warehouse_Storage_Time vs. Quality_Maintenance_Ratio plot shows a clear degradation trend over time.
+3. **Longer distance correspond to longer delivery time**
+* Route_Distance exhibits a strong linear relationship with Delivery_Time, though high variance points indicate secondary factors like Queue_Time or Traffic_Level play a critical role.
