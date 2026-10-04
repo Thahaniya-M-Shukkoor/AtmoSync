@@ -215,3 +215,21 @@ Key Analytical Insights
 * The negative slope in the Warehouse_Storage_Time vs. Quality_Maintenance_Ratio plot shows a clear degradation trend over time.
 3. **Longer distance correspond to longer delivery time**
 * Route_Distance exhibits a strong linear relationship with Delivery_Time, though high variance points indicate secondary factors like Queue_Time or Traffic_Level play a critical role.
+
+# 5.4 Multivariate Analysis
+Key Insights:
+1. Analysis A (Environment & Vibration vs. Spoilage):
+* What it shows: A heatmap displaying relationship scores from -1 to 1.Key
+* Finding: Looking at isolated single metrics gives near-zero scores. This proves that single sensor readings alone do not trigger spoilage. Spoilage happens when multiple conditions worsen together.   
+2. Analysis B (Environment vs. Quality):
+* What it shows: Points plotted across Temperature and Humidity, colored by product quality ratio.   
+* Key Finding: Low temperatures and moderate humidity maintain consistent crop quality best.
+3. Analysis C (Logistics vs. Delivery Time):
+* What it shows: Route Distance versus Delivery Time, colored by Traffic Level.   
+* Key Finding: Longer distance routes combined with high traffic (lighter color points) experience cumulative delays.   
+4. Analysis D (Operations Efficiency):
+* What it shows: Relationship between fuel burned, costs, distance, and efficiency.   
+* Key Finding: Fuel efficiency drops significantly as vehicle load and route delays increase.   
+5. Analysis E (AtmoSync Decision-Support Core):
+* What it shows: Our calculated Environmental Stress score plotted against Spoilage Risk.   
+* Key Finding: Combining temperature, humidity, and time into a single score provides a clearer pattern to help AtmoSync predict risk before crops spoil.
