@@ -233,3 +233,18 @@ Key Insights:
 5. Analysis E (AtmoSync Decision-Support Core):
 * What it shows: Our calculated Environmental Stress score plotted against Spoilage Risk.   
 * Key Finding: Combining temperature, humidity, and time into a single score provides a clearer pattern to help AtmoSync predict risk before crops spoil.
+
+# 5.5 Temperature / Humidity Analysis
+Findings:
+A. Temperature Comparison:
+* Storage temperature is tightly regulated around 5°C to 12°C to preserve crops. In contrast, ambient and IoT sensor temperatures span higher ranges (20°C to 70°C).   
+B. Humidity Comparison:
+* Storage humidity is controlled near 75%, whereas ambient humidity shows a broader curve.   
+C. Temperature vs Humidity:
+* The correlation score is nearly zero ($0.002$), showing that temperature and humidity vary independently in this dataset.   
+D & E. Impact on Spoilage Risk:
+* Single environmental variables alone show flat trendlines. This reinforces why AtmoSync requires a multi-variable index (combining temperature, humidity, and duration) to detect risk accurately.   
+F & G. Impact on Quality Ratio:
+* Similar to spoilage risk, individual readings alone do not shift quality ratios significantly.   
+H. Sensor Consistency:
+* The IoT temperature readings average about $7.4^\circ\text{C}$ lower than ambient temperature, while IoT humidity averages about $30\%$ lower. This gap shows that IoT sensors measure local micro-climates inside containers rather than outside weather conditions.
