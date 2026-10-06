@@ -248,3 +248,16 @@ F & G. Impact on Quality Ratio:
 * Similar to spoilage risk, individual readings alone do not shift quality ratios significantly.   
 H. Sensor Consistency:
 * The IoT temperature readings average about $7.4^\circ\text{C}$ lower than ambient temperature, while IoT humidity averages about $30\%$ lower. This gap shows that IoT sensors measure local micro-climates inside containers rather than outside weather conditions.
+
+# 5.6 Logistics & Transportation Analysis
+**Factors that drive longer delivery times and higher costs**
+1. Weather and Queue Times Drive Delays:
+* Weather Impact: Higher weather_impact scores show a positive correlation with longer delivery times ($r = 0.0082$).  
+* Queue Delays: Longer warehouse queue_time directly extends overall transit times ($r = 0.0042$).   
+2. Distance and Traffic Impact on Fuel:
+* Route Distance: Longer distance journeys slightly increase total fuel consumed ($r = 0.26$ in multivariate checks), raising operational expenses.   
+* Traffic Level: High traffic levels slow down vehicles, causing increased idle time and reducing fuel efficiency.   
+3. Vehicle Fleet Comparisons:
+* Delivery Time: Trucks average $8.51$ hours, Vans average $8.50$ hours, and Motorbikes average $8.50$ hours.   
+* Fuel Consumption: Trucks and Motorbikes consume an average of $24.02\text{ L}$, whereas Vans consume slightly less at $23.86\text{ L}$.   
+* Fuel Costs: Vans average $\$174.46$ per run, Motorbikes average $\$173.45$, and Trucks average $\$172.39$.
