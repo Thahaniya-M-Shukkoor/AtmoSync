@@ -381,6 +381,7 @@ No crop demonstrates significant sensitivity to temperature or humidity variatio
 * Individual temperature, humidity, or vibration values do not show a clear direct relationship with spoilage risk.  
 ### Conclusion
 The analysis shows that transportation conditions are much more variable than controlled storage conditions. However, no single environmental factor alone is enough to explain spoilage risk. This supports the AtmoSync approach of looking at multiple environmental conditions together rather than relying on one sensor reading.
+
 ---
 ## 6.2. Quality & Spoilage Risk Assessment
 ### Findings
