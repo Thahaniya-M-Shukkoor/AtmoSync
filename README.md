@@ -371,7 +371,8 @@ Tested cross-interactions between commodity type, environmental factors, and qua
 * Rice correlation ($r$): +0.0180
 No crop demonstrates significant sensitivity to temperature or humidity variations. The correlation coefficients across all three crops remain within $r \in [-0.013, +0.018]$, indicating that environmental variations do not yield differential spoilage or quality impacts for any specific crop in this dataset.
 
-## 1. Environmental Condition Analysis
+# 6. Findings and Conclusions
+## 6.1. Environmental Condition Analysis
 ### Findings
 * Storage conditions are relatively stable, with storage temperature around **7.5°C** and humidity around **75%**.
 * During transportation, temperature is much higher and more variable, averaging around **44.9°C**, while humidity averages around **90%**.
@@ -379,9 +380,9 @@ No crop demonstrates significant sensitivity to temperature or humidity variatio
 * Temperature and humidity do not show a meaningful relationship with each other in this dataset.
 * Individual temperature, humidity, or vibration values do not show a clear direct relationship with spoilage risk.  
 ### Conclusion
-**The analysis shows that transportation conditions are much more variable than controlled storage conditions. However, no single environmental factor alone is enough to explain spoilage risk. This supports the AtmoSync approach of looking at multiple environmental conditions together rather than relying on one sensor reading.**
+The analysis shows that transportation conditions are much more variable than controlled storage conditions. However, no single environmental factor alone is enough to explain spoilage risk. This supports the AtmoSync approach of looking at multiple environmental conditions together rather than relying on one sensor reading.
 ---
-# 2. Quality & Spoilage Risk Assessment
+## 6.2. Quality & Spoilage Risk Assessment
 ### Findings
 * Spoilage risk is centered around **1.16** and has relatively little variation across shipments.
 * Individual environmental factors such as temperature, humidity, vibration, storage temperature, and storage humidity have almost no direct linear relationship with spoilage risk.
@@ -389,9 +390,9 @@ No crop demonstrates significant sensitivity to temperature or humidity variatio
 * However, **queue time is associated with lower quality maintenance**, meaning longer waiting periods are linked with poorer quality.
 * The analysis also shows that combining temperature, humidity, and time into an **Environmental Stress Score** gives a clearer pattern with spoilage risk than looking at individual factors. 
 ### Conclusion
-**Spoilage risk cannot be explained by one environmental or logistics factor in this dataset. Instead, several conditions need to be considered together. Waiting time is one factor that is linked with lower quality, making timely movement of shipments important.**
+Spoilage risk cannot be explained by one environmental or logistics factor in this dataset. Instead, several conditions need to be considered together. Waiting time is one factor that is linked with lower quality, making timely movement of shipments important.
 ---
-# 3. Transportation & Storage Risk Analysis
+## 6.3. Transportation & Storage Risk Analysis
 ### Findings
 * Route distance has a clear relationship with delivery time: **longer routes generally take longer**.
 * Traffic and delays can further increase delivery time.
@@ -400,9 +401,9 @@ No crop demonstrates significant sensitivity to temperature or humidity variatio
 * Warehouse queue time contributes to longer overall transit time.
 * Average delivery time is around **8.5 hours**, while warehouse storage is around **18 hours**.  
 ### Conclusion
-**Distance, traffic and waiting time are important operational factors. They can increase delivery time and fuel usage, while longer waiting periods are also associated with lower quality. Therefore, reducing unnecessary delays and improving route planning can support safer and more efficient transportation.**
+Distance, traffic and waiting time are important operational factors. They can increase delivery time and fuel usage, while longer waiting periods are also associated with lower quality. Therefore, reducing unnecessary delays and improving route planning can support safer and more efficient transportation.
 ---
-# 4. Commodity-wise Analysis
+## 6.4. Commodity-wise Analysis
 ### Findings
 * The dataset contains three main crops: **Corn, Wheat and Rice**.
 * Corn and Wheat together account for about **80% of the shipments**.
@@ -415,9 +416,9 @@ No crop demonstrates significant sensitivity to temperature or humidity variatio
 * Route distance, delivery time, storage time, fuel consumption and fuel cost are also broadly similar between crops.
 * None of the crops shows a strong sensitivity to temperature or humidity in relation to spoilage or quality.  
 ### Conclusion
-**No major difference in spoilage risk or quality was found between Corn, Wheat and Rice. The three commodities experience broadly similar environmental and transportation conditions, so this dataset does not provide evidence that one crop is significantly more vulnerable than another.**
+No major difference in spoilage risk or quality was found between Corn, Wheat and Rice. The three commodities experience broadly similar environmental and transportation conditions, so this dataset does not provide evidence that one crop is significantly more vulnerable than another.
 ---
-# 5. Economic Impact Assessment
+## 6.5. Economic Impact Assessment
 ### Findings
 * The dataset contains **fuel consumption and fuel cost**, which allow us to study part of the operational cost.
 * Longer routes are associated with higher fuel consumption.
@@ -425,9 +426,9 @@ No crop demonstrates significant sensitivity to temperature or humidity variatio
 * However, the analysis does **not show a market-price variable or a direct monetary value for crop spoilage/loss**.
 * Also, the original `operational_cost` and `energy_consumption` variables were removed during preprocessing because they contained more than 90% infinite values.  
 ### Conclusion
-**The dataset allows us to examine transportation-related costs, particularly fuel costs, but it does not provide enough information to calculate the actual monetary loss caused by spoilage or quality deterioration. Therefore, the economic impact can only be assessed partially through fuel and transportation costs, not through direct spoilage-related financial loss.**
+The dataset allows us to examine transportation-related costs, particularly fuel costs, but it does not provide enough information to calculate the actual monetary loss caused by spoilage or quality deterioration. Therefore, the economic impact can only be assessed partially through fuel and transportation costs, not through direct spoilage-related financial loss.
 ---
-# 6. Operational Efficiency & Cost Analysis
+## 6.6. Operational Efficiency & Cost Analysis
 ### Findings
 * Route distance has a positive relationship with fuel consumption.
 * Longer routes therefore tend to require more fuel.
@@ -436,9 +437,9 @@ No crop demonstrates significant sensitivity to temperature or humidity variatio
 * Among vehicle types, fuel consumption is quite similar, although Vans show slightly lower average consumption.
 * The analysis indicates that **vehicle load and route delays can reduce fuel efficiency**.  
 ### Conclusion
-**Distance, traffic and delays are the main operational factors affecting fuel usage and efficiency. Better route planning and reducing unnecessary delays can help lower fuel consumption and transportation costs.**
+Distance, traffic and delays are the main operational factors affecting fuel usage and efficiency. Better route planning and reducing unnecessary delays can help lower fuel consumption and transportation costs.
 ---
-# Overall AtmoSync Conclusion
-> **The AtmoSync analysis shows that cold-chain shipment conditions are influenced by a combination of environmental, transportation and storage factors. Storage conditions are relatively stable, while temperature and humidity during transportation vary much more. However, no single environmental factor shows a strong direct relationship with spoilage risk. Instead, combining multiple conditions such as temperature, humidity and exposure time provides a better way to identify potential risk.**
-> **Transportation factors such as route distance, traffic and waiting time have a clearer impact on delivery time, fuel consumption and operational efficiency. Longer waiting times are also associated with lower quality maintenance. Across Corn, Wheat and Rice, no major differences were found in spoilage risk, quality or logistics conditions.**
-> **Overall, the analysis suggests that AtmoSync should focus on a combined view of environmental conditions, shipment duration and logistics performance rather than relying on a single factor. The analysis also highlights the importance of reducing transportation delays and improving route efficiency. However, the available dataset does not contain sufficient market-price or spoilage-loss information to calculate the actual monetary impact of crop deterioration.** 
+## Overall AtmoSync Conclusion
+> The AtmoSync analysis shows that cold-chain shipment conditions are influenced by a combination of environmental, transportation and storage factors. Storage conditions are relatively stable, while temperature and humidity during transportation vary much more. However, no single environmental factor shows a strong direct relationship with spoilage risk. Instead, combining multiple conditions such as temperature, humidity and exposure time provides a better way to identify potential risk.
+> Transportation factors such as route distance, traffic and waiting time have a clearer impact on delivery time, fuel consumption and operational efficiency. Longer waiting times are also associated with lower quality maintenance. Across Corn, Wheat and Rice, no major differences were found in spoilage risk, quality or logistics conditions.
+> Overall, the analysis suggests that AtmoSync should focus on a combined view of environmental conditions, shipment duration and logistics performance rather than relying on a single factor. The analysis also highlights the importance of reducing transportation delays and improving route efficiency. However, the available dataset does not contain sufficient market-price or spoilage-loss information to calculate the actual monetary impact of crop deterioration.
