@@ -252,8 +252,8 @@ H. Sensor Consistency:
 ## 5.6 Logistics & Transportation Analysis
 **Factors that drive longer delivery times and higher costs**
 1. Weather and Queue Times Drive Delays:
-* Weather Impact: Higher weather_impact scores show a positive correlation with longer delivery times ($r = 0.0082$).  
-* Queue Delays: Longer warehouse queue_time directly extends overall transit times ($r = 0.0042$).   
+* Weather Impact: Weather impact has a negligible positive linear correlation with delivery delays (\(r = 0.0082\)), indicating virtually no linear association in the analyzed data.
+* Queue Time: Queue time also shows a negligible positive linear correlation with delivery delays (\(r = 0.0042\)), suggesting little to no linear association between the variables.   
 2. Distance and Traffic Impact on Fuel:
 * Route Distance: Longer distance journeys slightly increase total fuel consumed ($r = 0.26$ in multivariate checks), raising operational expenses.   
 * Traffic Level: High traffic levels slow down vehicles, causing increased idle time and reducing fuel efficiency.   
