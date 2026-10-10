@@ -264,16 +264,19 @@ H. Sensor Consistency:
 
 ## 5.7 Quality / Spoilage Analysis
 Key Insights
+
 **A. Spoilage Distribution (spoilage_risk)**
 * Distribution: Normal (bell-shaped) curve centered around 1.16.
 * Average: Mean = 1.1635, Median = 1.1612, Standard Deviation = 0.0701.
 * Range: Minimum = 0.8914, Maximum = 1.4588 (Span = 0.5673).
 * Outliers: 417 points (0.78% of the dataset) fall outside the standard 1.5 IQR bounds.
+
 **B. Quality Distribution (quality_maintenance_ratio)**
 * Distribution: Highly right-skewed (heavy-tailed) distribution with most values concentrated between 0 and 50, and extreme upper tail values exceeding 1,000.
 * Mean vs. Median: Mean = 76.61, Median = 22.70 (the high mean is pulled up by extreme outliers).
 * Range: Minimum = 0.0730, Maximum = 1044.73 (Span = 1044.66).
 * Outliers: 6,229 points (11.69% of the dataset) qualify as upper-tail outliers.
+
 **C. Environmental Factors $\rightarrow$ Spoilage**
 Examining linear correlation coefficients ($r$) between environmental variables and spoilage_risk:
 * Temperature $\rightarrow$ Spoilage: $r = -0.0006$ (No direct linear impact).
@@ -281,41 +284,50 @@ Examining linear correlation coefficients ($r$) between environmental variables 
 * Vibration $\rightarrow$ Spoilage: $r = -0.0013$ (No direct effect).
 * Storage Temperature $\rightarrow$ Spoilage: $r = 0.0027$ (Negligible effect).
 * Storage Humidity $\rightarrow$ Spoilage: $r = 0.0059$ (Negligible effect).
+
 **D. Storage $\rightarrow$ Spoilage**
 * warehouse_storage_time $\rightarrow$ spoilage_risk: $r = 0.0012$. Storage time in the warehouse shows no statistical correlation with spoilage risk in this dataset.
+
 **E. Transportation $\rightarrow$ Spoilage**
 * route_distance $\rightarrow$ spoilage_risk: $r = 0.0070$. Route distance does not noticeably increase spoilage risk.
 * delivery_time $\rightarrow$ spoilage_risk: $r = -0.0008$. Transit delivery time exhibits no linear association with spoilage risk.
+
 **F. Spoilage $\rightarrow$ Quality**
 * spoilage_risk $\leftrightarrow$ quality_maintenance_ratio: $r = -0.0013$.
 * Key Finding: In this dataset, spoilage_risk and quality_maintenance_ratio are statistically independent ($r \approx 0$). High quality maintenance ratios occur uniformly across the entire range of spoilage risk scores.
+
 **G. Crop $\rightarrow$ Spoilage**
 Comparing average spoilage_risk across crop types:
 1. Corn: Mean = 1.1632 (Median = 1.1609)
 2. Rice: Mean = 1.1630 (Median = 1.1605)
 3. Wheat: Mean = 1.1641 (Median = 1.1619)
 Spoilage risk distribution is uniform across all three crop types.
+
 **H. Crop $\rightarrow$ Quality**
 Comparing average quality_maintenance_ratio across crop types:
 1. Corn: Mean = 77.03 (Median = 22.91)
 2. Rice: Mean = 76.15 (Median = 22.38)
 3. Wheat: Mean = 76.41 (Median = 22.63)
 Quality maintenance ratios show consistent behavior across Wheat, Corn, and Rice.
+
 **Factors Associated with Higher Spoilage Risk and Lower Quality Maintenance**
 1. **Spoilage Risk Drivers:**
 * None of the environmental (temperature, humidity), storage (warehouse time), transportation (route distance, delivery time), or crop variables show strong direct correlation with spoilage_risk in this dataset. Spoilage risk follows a standard normal distribution centered at 1.16.
 2. **Quality Maintenance Drivers:**
 * Vibration Level (+0.836 correlation): vibration_level shows a strong positive correlation ($r = 0.836$, Spearman $r = 0.895$) with quality_maintenance_ratio.
 * Queue Time (-0.221 correlation): queue_time shows a moderate negative correlation ($r = -0.221$, Spearman $r = -0.418$) with quality_maintenance_ratio, meaning longer queue times are associated with lower quality maintenance.
+
 # 5.8 Commodity-Level Analysis
 Key Insights
+
 **A. Crop Distribution**
 * Corn: 21,400 records (40.15%)
 * Wheat: 21,253 records (39.87%)
 * Rice: 10,652 records (19.98%)
 Total Records: 53,305
 Corn and Wheat make up approximately 80% of the entire dataset, while Rice represents approximately 20%.
-**B & C. Crop-wise Environmental Conditions (Temperature & Humidity)**
+
+**B. Crop-wise Environmental Conditions (Temperature & Humidity)**
 * Average Transit Temperature:
 1. Corn: 45.02°C ($\sigma = 14.98$)
 2. Rice: 44.90°C ($\sigma = 15.06$)
@@ -325,7 +337,8 @@ Corn and Wheat make up approximately 80% of the entire dataset, while Rice repre
 2. Wheat: 89.93% ($\sigma = 22.72$)
 3. Corn: 89.90% ($\sigma = 22.45$)
 The mean temperature (~ 44.9°C - 45.0°C) and mean humidity (~ 89.9% - 90.1%) are virtually identical across all three crop types. There is no evidence of crop-specific environmental routing or temperature-controlled segregation in this dataset.
-**D & E. Crop-wise Spoilage Risk & Quality Maintenance**
+
+**C. Crop-wise Spoilage Risk & Quality Maintenance**
 * Average Spoilage Risk:
 1. Wheat: 1.1641
 2. Corn: 1.1632
@@ -335,7 +348,8 @@ The mean temperature (~ 44.9°C - 45.0°C) and mean humidity (~ 89.9% - 90.1%) a
 2. Wheat: 76.41
 3. Rice: 76.15
 Spoilage risk and quality maintenance ratios show negligible variation across commodity types, remaining constant across Wheat, Corn, and Rice.
-**F. Crop-wise Logistics Comparison**
+
+**D. Crop-wise Logistics Comparison**
 1. Mean Route Distance:
 * Wheat: 533.49 km
 * Corn: 534.49 km
@@ -349,7 +363,8 @@ Spoilage risk and quality maintenance ratios show negligible variation across co
 * Wheat: 17.99 hours
 * Rice: 18.08 hours
 Logistical parameters do not favor or penalize any particular commodity type; distance and travel times are uniformly distributed.
-**G. Crop-wise Cost Comparison**
+
+**E. Crop-wise Cost Comparison**
 1. Mean Fuel Consumption:
 * Corn: 23.89 L
 * Rice: 24.03 L
@@ -359,7 +374,8 @@ Logistical parameters do not favor or penalize any particular commodity type; di
 * Wheat: $173.41
 * Corn: $173.72
 Fuel consumption and associated fuel costs are consistent across commodity types.
-**H. Crop × Environmental Conditions (Multivariate Extension)**
+
+**F. Crop × Environmental Conditions (Multivariate Extension)**
 Tested cross-interactions between commodity type, environmental factors, and quality outcomes:
 1. Crop Type × Temperature × Spoilage Risk:
 * Wheat correlation ($r$): -0.0064
