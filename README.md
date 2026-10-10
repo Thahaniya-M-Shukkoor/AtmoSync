@@ -561,5 +561,3 @@ These enhancements could help extend the current exploratory analytics project t
 AtmoSync: Micro-Climate Arbitrage Analytics applies Python-based data preparation, exploratory data analysis, and Power BI visualization to investigate environmental conditions, agricultural logistics, quality-related indicators, and operational costs.
 The analysis highlights relationships among transportation distance, delivery performance, fuel consumption, and selected quality-maintenance indicators. It also shows that the available spoilage-risk indicator varies little across the examined crops and has negligible linear correlations with the tested individual variables.
 The project demonstrates an end-to-end descriptive analytics workflow, from data preparation to insight communication. However, actual spoilage prediction, verified financial-loss estimation, and real-time arbitrage decisions would require additional validated data and further development.
-
-available dataset does not contain sufficient market-price or spoilage-loss information to calculate the actual monetary impact of crop deterioration.
