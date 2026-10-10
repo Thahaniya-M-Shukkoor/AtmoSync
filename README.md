@@ -242,11 +242,11 @@ B. Humidity Comparison:
 * Storage humidity is controlled near 75%, whereas ambient humidity shows a broader curve.   
 C. Temperature vs Humidity:
 * The correlation score is nearly zero ($0.002$), showing that temperature and humidity vary independently in this dataset.   
-D & E. Impact on Spoilage Risk:
+D. Impact on Spoilage Risk:
 * Single environmental variables alone show flat trendlines. This reinforces why AtmoSync requires a multi-variable index (combining temperature, humidity, and duration) to detect risk accurately.   
-F & G. Impact on Quality Ratio:
+E. Impact on Quality Ratio:
 * Similar to spoilage risk, individual readings alone do not shift quality ratios significantly.   
-H. Sensor Consistency:
+F. Sensor Consistency:
 * The IoT temperature readings average about $7.4^\circ\text{C}$ lower than ambient temperature, while IoT humidity averages about $30\%$ lower. This gap shows that IoT sensors measure local micro-climates inside containers rather than outside weather conditions.
 
 ## 5.6 Logistics & Transportation Analysis
@@ -264,6 +264,7 @@ H. Sensor Consistency:
 
 ## 5.7 Quality / Spoilage Analysis
 Key Insights
+
 **A. Spoilage Distribution (spoilage_risk)**
 * Distribution: Normal (bell-shaped) curve centered around 1.16.
 * Average: Mean = 1.1635, Median = 1.1612, Standard Deviation = 0.0701.
@@ -317,13 +318,15 @@ Quality maintenance ratios show consistent behavior across Wheat, Corn, and Rice
 * Queue Time (-0.221 correlation): queue_time shows a moderate negative correlation ($r = -0.221$, Spearman $r = -0.418$) with quality_maintenance_ratio, meaning longer queue times are associated with lower quality maintenance.
 # 5.8 Commodity-Level Analysis
 Key Insights
+
 **A. Crop Distribution**
 * Corn: 21,400 records (40.15%)
 * Wheat: 21,253 records (39.87%)
 * Rice: 10,652 records (19.98%)
 Total Records: 53,305
 Corn and Wheat make up approximately 80% of the entire dataset, while Rice represents approximately 20%.
-**B & C. Crop-wise Environmental Conditions (Temperature & Humidity)**
+
+**B. Crop-wise Environmental Conditions (Temperature & Humidity)**
 * Average Transit Temperature:
 1. Corn: 45.02°C ($\sigma = 14.98$)
 2. Rice: 44.90°C ($\sigma = 15.06$)
@@ -333,7 +336,8 @@ Corn and Wheat make up approximately 80% of the entire dataset, while Rice repre
 2. Wheat: 89.93% ($\sigma = 22.72$)
 3. Corn: 89.90% ($\sigma = 22.45$)
 The mean temperature (~ 44.9°C - 45.0°C) and mean humidity (~ 89.9% - 90.1%) are virtually identical across all three crop types. There is no evidence of crop-specific environmental routing or temperature-controlled segregation in this dataset.
-**D & E. Crop-wise Spoilage Risk & Quality Maintenance**
+
+**C. Crop-wise Spoilage Risk & Quality Maintenance**
 * Average Spoilage Risk:
 1. Wheat: 1.1641
 2. Corn: 1.1632
@@ -343,7 +347,8 @@ The mean temperature (~ 44.9°C - 45.0°C) and mean humidity (~ 89.9% - 90.1%) a
 2. Wheat: 76.41
 3. Rice: 76.15
 Spoilage risk and quality maintenance ratios show negligible variation across commodity types, remaining constant across Wheat, Corn, and Rice.
-**F. Crop-wise Logistics Comparison**
+
+**D. Crop-wise Logistics Comparison**
 1. Mean Route Distance:
 * Wheat: 533.49 km
 * Corn: 534.49 km
@@ -357,7 +362,8 @@ Spoilage risk and quality maintenance ratios show negligible variation across co
 * Wheat: 17.99 hours
 * Rice: 18.08 hours
 Logistical parameters do not favor or penalize any particular commodity type; distance and travel times are uniformly distributed.
-**G. Crop-wise Cost Comparison**
+
+**E. Crop-wise Cost Comparison**
 1. Mean Fuel Consumption:
 * Corn: 23.89 L
 * Rice: 24.03 L
@@ -367,7 +373,8 @@ Logistical parameters do not favor or penalize any particular commodity type; di
 * Wheat: $173.41
 * Corn: $173.72
 Fuel consumption and associated fuel costs are consistent across commodity types.
-**H. Crop × Environmental Conditions (Multivariate Extension)**
+
+**F. Crop × Environmental Conditions (Multivariate Extension)**
 Tested cross-interactions between commodity type, environmental factors, and quality outcomes:
 1. Crop Type × Temperature × Spoilage Risk:
 * Wheat correlation ($r$): -0.0064
