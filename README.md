@@ -560,12 +560,3 @@ These enhancements could help extend the current exploratory analytics project t
 AtmoSync: Micro-Climate Arbitrage Analytics applies Python-based data preparation, exploratory data analysis, and Power BI visualization to investigate environmental conditions, agricultural logistics, quality-related indicators, and operational costs.
 The analysis highlights relationships among transportation distance, delivery performance, fuel consumption, and selected quality-maintenance indicators. It also shows that the available spoilage-risk indicator varies little across the examined crops and has negligible linear correlations with the tested individual variables.
 The project demonstrates an end-to-end descriptive analytics workflow, from data preparation to insight communication. However, actual spoilage prediction, verified financial-loss estimation, and real-time arbitrage decisions would require additional validated data and further development.
-
-available dataset does not contain sufficient market-price or spoilage-loss information to calculate the actual monetary impact of crop deterioration.
-
-## Overall AtmoSync Conclusion
-* The AtmoSync analysis shows that cold-chain shipment conditions are influenced by a combination of environmental, transportation and storage factors. Storage conditions are relatively stable, while temperature and humidity during transportation vary much more. However, no single environmental factor shows a strong direct relationship with spoilage risk. Instead, combining multiple conditions such as temperature, humidity and exposure time provides a better way to identify potential risk.
- 
-* Transportation factors such as route distance, traffic and waiting time have a clearer impact on delivery time, fuel consumption and operational efficiency. Longer waiting times are also associated with lower quality maintenance. Across Corn, Wheat and Rice, no major differences were found in spoilage risk, quality or logistics conditions.
-
-* Overall, the analysis suggests that AtmoSync should focus on a combined view of environmental conditions, shipment duration and logistics performance rather than relying on a single factor. The analysis also highlights the importance of reducing transportation delays and improving route efficiency. However, the available dataset does not contain sufficient market-price or spoilage-loss information to calculate the actual monetary impact of crop deterioration.
