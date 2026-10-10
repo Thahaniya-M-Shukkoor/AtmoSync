@@ -445,9 +445,118 @@ The dataset allows us to examine transportation-related costs, particularly fuel
 Distance, traffic and delays are the main operational factors affecting fuel usage and efficiency. Better route planning and reducing unnecessary delays can help lower fuel consumption and transportation costs.
 
 ---
-## Overall AtmoSync Conclusion
-* The AtmoSync analysis shows that cold-chain shipment conditions are influenced by a combination of environmental, transportation and storage factors. Storage conditions are relatively stable, while temperature and humidity during transportation vary much more. However, no single environmental factor shows a strong direct relationship with spoilage risk. Instead, combining multiple conditions such as temperature, humidity and exposure time provides a better way to identify potential risk.
- 
-* Transportation factors such as route distance, traffic and waiting time have a clearer impact on delivery time, fuel consumption and operational efficiency. Longer waiting times are also associated with lower quality maintenance. Across Corn, Wheat and Rice, no major differences were found in spoilage risk, quality or logistics conditions.
 
-* Overall, the analysis suggests that AtmoSync should focus on a combined view of environmental conditions, shipment duration and logistics performance rather than relying on a single factor. The analysis also highlights the importance of reducing transportation delays and improving route efficiency. However, the available dataset does not contain sufficient market-price or spoilage-loss information to calculate the actual monetary impact of crop deterioration.
+## 7. Business Recommendations
+Based on the exploratory data analysis, the following recommendations can support improved agricultural logistics management:
+- **Environmental Monitoring:** Monitor transportation and storage temperature, humidity, and other available sensor readings to identify unusual conditions and investigate potential risks.
+- **Delay Management:** Review warehouse queue times and other sources of delay, as queue time was associated with lower quality maintenance in the analysis.
+- **Route Optimization:** Evaluate route distance, traffic conditions, delivery time, and fuel consumption together when planning transportation.
+- **Commodity Monitoring:** Continue monitoring Corn, Wheat, and Rice under comparable conditions. The current analysis did not identify substantial differences in spoilage-risk indicators across these crops.
+- **Operational Cost Control:** Track fuel consumption and fuel costs to identify opportunities for reducing avoidable transportation expenses.
+- **Data Quality Improvement:** Validate sensor readings, quality indicators, and spoilage-risk measurements before using them for operational alerts or predictive decisions.
+
+These recommendations are based on patterns observed in the available dataset. They should be validated with reliable operational records before being used to make actual shipment-management decisions.
+
+## 8. Power BI Dashboard
+### 8.1 Dashboard Overview
+An interactive Power BI dashboard was developed to present the key findings of the AtmoSync: Micro-Climate Arbitrage Analytics project. The dashboard consists of three analytical pages covering environmental and commodity spoilage risk, logistics and transportation performance, and financial and operational efficiency.
+
+Interactive slicers for date range, crop type, and vehicle type allow users to explore the available data across different time periods and categories.
+
+### 8.2 Page 1: Environmental & Commodity Spoilage Risk
+This page focuses on environmental conditions and commodity-level spoilage-risk indicators.
+**Key Performance Indicators (KPIs):**
+- Total Shipments: approximately 53K records.
+- Average Spoilage Risk: approximately 1.16.
+- Average In-Transit Temperature: approximately 44.94.
+- Average Storage Temperature: approximately 7.51.
+- Average Quality Maintenance: approximately 76.61.
+**Visualizations:**
+- Temperature Stability over Time: compares the displayed temperature measures across the available years.
+- Spoilage Risk Analysis: compares average spoilage-risk indicators across Wheat, Corn, and Rice.
+- Vibration Level vs. Spoilage Risk: explores the relationship between vibration readings and spoilage-risk values.
+- Humidity Analysis: visualizes humidity distributions across commodity categories.
+
+**Purpose:** To provide an overview of environmental conditions and compare spoilage-related indicators across agricultural commodities.
+
+### 8.3 Page 2: Logistics, Storage & Transportation Risk
+This page examines transportation performance, warehouse storage, and selected logistics-related indicators.
+**Key Performance Indicators (KPIs):**
+- Total Shipments: approximately 53K records.
+- Average Delivery Time: approximately 8.51 hours.
+- Average Days Since Harvest: approximately 1.44K in the displayed aggregation.
+- Average Warehouse Storage Time: approximately 17.99 hours.
+**Visualizations:**
+- Vehicle Performance Table: compares vehicle types using delivery time, traffic level, vibration level, and spoilage risk.
+- Warehouse Storage Time vs. Spoilage Risk: compares crop-level averages for storage duration and spoilage-risk indicators.
+- Spoilage Risk by Crop Type and Traffic Level: displays the dashboard's selected breakdown of spoilage-risk data.
+
+**Purpose:** To help users compare vehicle-level operational metrics, explore storage-related patterns, and examine logistics performance across available categories.
+
+### 8.4 Page 3: Financial & Operational Efficiency
+This page presents transportation-related costs and fuel consumption, along with the dashboard's estimated-loss-risk measure.
+**Key Performance Indicators (KPIs):**
+- Total Fuel Costs: approximately 9.22M in the dataset's reported currency units.
+- Average Fuel Consumption: approximately 23.99 in the dataset's reported unit.
+- Estimated Loss Risk: approximately 10.73M, as displayed in the dashboard.
+**Visualizations:**
+- Fuel Costs and Fuel Consumption by Vehicle Type: compares total fuel costs and fuel-consumption record counts across trucks, vans, and motorbikes.
+- Route Distance and Fuel Consumption by Vehicle Type: explores the displayed relationship between route-distance and fuel-consumption counts.
+- Fuel Costs and Estimated Economic Impact over Time: compares the two displayed measures across the available years.
+
+**Purpose:** To provide a comparative view of transportation expenditure, fuel-related metrics, and the estimated-loss indicator used in the dashboard.
+
+The estimated-loss measure should be interpreted according to its actual DAX formula and underlying data. It should not be treated as verified monetary spoilage loss unless the calculation is supported by appropriate financial and quality-loss data.
+
+### 8.5 Interactive Features
+The dashboard provides the following interactive controls:
+- **Date Range:** filters the displayed data by year.
+- **Crop Type:** enables comparisons among Corn, Wheat, and Rice.
+- **Vehicle Type:** enables comparisons among trucks, vans, and motorbikes.
+These controls allow users to examine the available environmental, transportation, commodity, and cost-related indicators under different filter selections.
+
+### 8.6 Dashboard Contribution
+The dashboard brings together the project's exploratory findings in a visual decision-support interface. It supports descriptive comparisons of environmental conditions, logistics performance, commodity-level indicators, and transportation-related costs.
+The dashboard is intended for exploratory and descriptive analysis. It does not independently establish causal relationships, validate actual spoilage losses, or implement real-time shipment rerouting.
+
+## 9. Project Scope and Objective Achievement
+The project was designed around environmental monitoring, quality and spoilage-risk assessment, transportation and storage analysis, commodity comparisons, economic impact, operational efficiency, and dashboard development.
+The extent to which these objectives were addressed depends on the variables available in the selected dataset.
+
+| Project objective | Coverage in the current project |
+|---|---|
+| Environmental condition analysis | Analyzed available temperature, humidity, storage, and sensor-related variables. |
+| Quality and spoilage-risk assessment | Examined the available spoilage-risk and quality-maintenance indicators and their relationships with other variables. |
+| Transportation and storage risk | Analyzed route distance, delivery time, traffic, queue time, and storage duration. |
+| Commodity-level analysis | Compared environmental, quality-related, and logistics indicators across Corn, Wheat, and Rice. |
+| Economic impact assessment | Partially addressed through fuel consumption and fuel costs; actual spoilage-related financial losses could not be calculated. |
+| Operational efficiency and cost analysis | Examined available transportation and fuel-related indicators. Some intended variables were excluded during data cleaning because of data-quality issues. |
+| Interactive dashboard development | Developed a Power BI dashboard to communicate analytical findings and support data exploration. |
+
+The project provides an exploratory analytics assessment of agricultural logistics data. Objectives requiring actual market prices, validated spoilage outcomes, continuous sensor records, or shipment-level tracking remain outside the scope of the current dataset.
+
+## 10. Limitations and Future Scope
+### 10.1 Current Limitations
+- **Data quality:** Several columns contained excessive infinite values and were removed during preprocessing.
+- **Limited shipment tracking:** Explicit container and shipment identifiers were unavailable.
+- **Limited temporal monitoring:** The available data does not establish a continuous stream of sensor observations for real-time monitoring.
+- **Economic assessment:** Market-price and direct spoilage-loss information was unavailable, preventing the calculation of verified spoilage-related financial losses or arbitrage profits.
+- **Interpretation of relationships:** Correlations and exploratory patterns do not establish cause-and-effect relationships.
+- **Indicator validation:** The definitions and reliability of spoilage-risk and quality-maintenance indicators need to be verified before operational or predictive use.
+
+### 10.2 Future Scope
+Future development could include:
+- Integrating reliable market-price data to estimate potential commodity-value changes.
+- Incorporating validated quality measurements and observed spoilage outcomes.
+- Integrating shipment identifiers and continuous sensor data for shipment-level monitoring.
+- Developing a real-time data pipeline and automated alerts, subject to the availability of suitable infrastructure.
+- Evaluating and validating a predictive model if sufficient labelled data becomes available.
+- Extending the dashboard to support shipment-level tracking, risk monitoring, and scenario analysis.
+These enhancements could help extend the current exploratory analytics project toward a more comprehensive agricultural logistics monitoring and decision-support solution.
+
+## 11. Conclusion
+AtmoSync: Micro-Climate Arbitrage Analytics applies Python-based data preparation, exploratory data analysis, and Power BI visualization to investigate environmental conditions, agricultural logistics, quality-related indicators, and operational costs.
+The analysis highlights relationships among transportation distance, delivery performance, fuel consumption, and selected quality-maintenance indicators. It also shows that the available spoilage-risk indicator varies little across the examined crops and has negligible linear correlations with the tested individual variables.
+The project demonstrates an end-to-end descriptive analytics workflow, from data preparation to insight communication. However, actual spoilage prediction, verified financial-loss estimation, and real-time arbitrage decisions would require additional validated data and further development.
+
+available dataset does not contain sufficient market-price or spoilage-loss information to calculate the actual monetary impact of crop deterioration.
