@@ -471,6 +471,7 @@ This page focuses on environmental conditions and commodity-level spoilage-risk 
 - Average In-Transit Temperature: approximately 44.94.
 - Average Storage Temperature: approximately 7.51.
 - Average Quality Maintenance: approximately 76.61.
+
 **Visualizations:**
 - Temperature Stability over Time: compares the displayed temperature measures across the available years.
 - Spoilage Risk Analysis: compares average spoilage-risk indicators across Wheat, Corn, and Rice.
@@ -486,6 +487,7 @@ This page examines transportation performance, warehouse storage, and selected l
 - Average Delivery Time: approximately 8.51 hours.
 - Average Days Since Harvest: approximately 1.44K in the displayed aggregation.
 - Average Warehouse Storage Time: approximately 17.99 hours.
+
 **Visualizations:**
 - Vehicle Performance Table: compares vehicle types using delivery time, traffic level, vibration level, and spoilage risk.
 - Warehouse Storage Time vs. Spoilage Risk: compares crop-level averages for storage duration and spoilage-risk indicators.
@@ -499,6 +501,7 @@ This page presents transportation-related costs and fuel consumption, along with
 - Total Fuel Costs: approximately 9.22M in the dataset's reported currency units.
 - Average Fuel Consumption: approximately 23.99 in the dataset's reported unit.
 - Estimated Loss Risk: approximately 10.73M, as displayed in the dashboard.
+
 **Visualizations:**
 - Fuel Costs and Fuel Consumption by Vehicle Type: compares total fuel costs and fuel-consumption record counts across trucks, vans, and motorbikes.
 - Route Distance and Fuel Consumption by Vehicle Type: explores the displayed relationship between route-distance and fuel-consumption counts.
