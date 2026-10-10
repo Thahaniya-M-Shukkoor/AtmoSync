@@ -269,11 +269,13 @@ Key Insights
 * Average: Mean = 1.1635, Median = 1.1612, Standard Deviation = 0.0701.
 * Range: Minimum = 0.8914, Maximum = 1.4588 (Span = 0.5673).
 * Outliers: 417 points (0.78% of the dataset) fall outside the standard 1.5 IQR bounds.
+
 **B. Quality Distribution (quality_maintenance_ratio)**
 * Distribution: Highly right-skewed (heavy-tailed) distribution with most values concentrated between 0 and 50, and extreme upper tail values exceeding 1,000.
 * Mean vs. Median: Mean = 76.61, Median = 22.70 (the high mean is pulled up by extreme outliers).
 * Range: Minimum = 0.0730, Maximum = 1044.73 (Span = 1044.66).
 * Outliers: 6,229 points (11.69% of the dataset) qualify as upper-tail outliers.
+
 **C. Environmental Factors $\rightarrow$ Spoilage**
 Examining linear correlation coefficients ($r$) between environmental variables and spoilage_risk:
 * Temperature $\rightarrow$ Spoilage: $r = -0.0006$ (No direct linear impact).
@@ -281,26 +283,32 @@ Examining linear correlation coefficients ($r$) between environmental variables 
 * Vibration $\rightarrow$ Spoilage: $r = -0.0013$ (No direct effect).
 * Storage Temperature $\rightarrow$ Spoilage: $r = 0.0027$ (Negligible effect).
 * Storage Humidity $\rightarrow$ Spoilage: $r = 0.0059$ (Negligible effect).
+
 **D. Storage $\rightarrow$ Spoilage**
 * warehouse_storage_time $\rightarrow$ spoilage_risk: $r = 0.0012$. Storage time in the warehouse shows no statistical correlation with spoilage risk in this dataset.
+
 **E. Transportation $\rightarrow$ Spoilage**
 * route_distance $\rightarrow$ spoilage_risk: $r = 0.0070$. Route distance does not noticeably increase spoilage risk.
 * delivery_time $\rightarrow$ spoilage_risk: $r = -0.0008$. Transit delivery time exhibits no linear association with spoilage risk.
+
 **F. Spoilage $\rightarrow$ Quality**
 * spoilage_risk $\leftrightarrow$ quality_maintenance_ratio: $r = -0.0013$.
 * Key Finding: In this dataset, spoilage_risk and quality_maintenance_ratio are statistically independent ($r \approx 0$). High quality maintenance ratios occur uniformly across the entire range of spoilage risk scores.
+
 **G. Crop $\rightarrow$ Spoilage**
 Comparing average spoilage_risk across crop types:
 1. Corn: Mean = 1.1632 (Median = 1.1609)
 2. Rice: Mean = 1.1630 (Median = 1.1605)
 3. Wheat: Mean = 1.1641 (Median = 1.1619)
 Spoilage risk distribution is uniform across all three crop types.
+
 **H. Crop $\rightarrow$ Quality**
 Comparing average quality_maintenance_ratio across crop types:
 1. Corn: Mean = 77.03 (Median = 22.91)
 2. Rice: Mean = 76.15 (Median = 22.38)
 3. Wheat: Mean = 76.41 (Median = 22.63)
 Quality maintenance ratios show consistent behavior across Wheat, Corn, and Rice.
+
 **Factors Associated with Higher Spoilage Risk and Lower Quality Maintenance**
 1. **Spoilage Risk Drivers:**
 * None of the environmental (temperature, humidity), storage (warehouse time), transportation (route distance, delivery time), or crop variables show strong direct correlation with spoilage_risk in this dataset. Spoilage risk follows a standard normal distribution centered at 1.16.
